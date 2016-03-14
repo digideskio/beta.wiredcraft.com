@@ -176,17 +176,6 @@ body.page-post {
           @include clearfix;
           margin-top: 2*$space;
           padding: $space/2 0;
-          &.fixed {
-            background: #FFF;
-            bottom: 0;
-            box-shadow: 0 -3px 0 rgba(0,0,0,.03);
-            left: 50%;
-            max-width: $content;
-            position: fixed;
-            @include transform(translateX(-50%));
-            width: 95%;
-            z-index: 997;
-          }
           * {
             vertical-align: middle;
           }
@@ -283,6 +272,17 @@ body.page-post {
             }
             .social {
               float: right;
+            }
+            &.fixed {
+              background: #FFF;
+              bottom: 0;
+              box-shadow: 0 -3px 0 rgba(0,0,0,.03);
+              left: 50%;
+              max-width: $content;
+              position: fixed;
+              @include transform(translateX(-50%));
+              width: 95%;
+              z-index: 997;
             }
           }
         }

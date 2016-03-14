@@ -42,7 +42,7 @@ Shortly after we got back home, a couple of our more senior folks left... Sh*t.
 
 Every major issue we've run into helped us grow up. It's hard to predict what will throw you onto the right path, but somehow it rarely looks (or feels) good. If somehow you manage to overcome it, you get stronger in the process.
 
-I'm actually still organizing some of my thoughts around this, but I recommend you watch *Why Greatness Cannot Be Planned: The Myth of the Objective* by Kenneth Stanley. It was pretty eye-opening for me (I'd put it on the same level as [Siddhartha](https://en.wikipedia.org/wiki/Siddhartha_(novel)));
+I'm actually still organizing some of my thoughts around this, but I recommend you watch *Why Greatness Cannot Be Planned: The Myth of the Objective* by Kenneth Stanley. It was pretty eye-opening for me (I'd put it on the same level as [Siddhartha](https://en.wikipedia.org/wiki/Siddhartha_(novel))).
 
 [Why Greatness Cannot Be Planned: The Myth of the Objective](https://www.youtube.com/watch?v=dXQPL9GooyI)
 

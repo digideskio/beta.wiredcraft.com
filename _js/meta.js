@@ -4,11 +4,12 @@ $(function() {
       windowHeight = 0;
 
   function metaInit() {
+    $('#content .post .meta').height('');
     metaHeight = $('#content .post .meta').outerHeight();
     $('#content .post .meta').height(metaHeight);
     metaOffset = $('#content .post .meta').offset();
     windowHeight = $(window).height();
-    metaStick();
+    metaStick();console.log('Hello');
   }
 
   metaInit();
@@ -17,7 +18,9 @@ $(function() {
   $('#content .post .body').on('modified', metaInit);
 
   // Resizing the window change the offset
-  $(window).resize(function() { metaInit(); });
+  $(window).resize(function() {
+    metaInit();
+  });
 
   $(window).scroll(function () { metaStick(); });
 
