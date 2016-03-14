@@ -3,8 +3,8 @@ title: "Wiredcraft"
 email: "info@wiredcraft.com"
 description: Wiredcraft is a team of expert designers, engineers and strategists building Web and mobile products.
 baseurl: ""
-url: "https://wiredcraft.com"
-enforce_ssl: "wiredcraft.com"
+url: "https://beta.wiredcraft.com"
+enforce_ssl: "beta.wiredcraft.com"
 keywords:
 - Washington DC
 - Berlin
