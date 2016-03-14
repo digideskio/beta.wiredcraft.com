@@ -15,5 +15,7 @@ $(function() {
               that.replaceWith(embed.replace(/\[vid\]/g, this.replace('v=','')) );
           });
       }
+      // Throw a custom event for meta.js
+      $('#content .post .body').trigger('modified');
   });
 });

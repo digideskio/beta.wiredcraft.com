@@ -29,6 +29,7 @@ intercom: or40v78e
 exclude: ['README.md', 'package.json', 'bower.json', 'Gemfile', 'node_modules', 'bower_components']
 paginate: 24
 paginate_path: "/blog/:num"
+permalink: /blog/:title/
 excerpt_separator: <!-- more -->
 collections:
   jobs:
