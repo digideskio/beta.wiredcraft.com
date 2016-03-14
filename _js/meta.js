@@ -1,4 +1,6 @@
 $(function() {
+  if (!$('#content .post').length) return;
+
   var metaHeight = 0,
       metaOffset = 0,
       windowHeight = 0;
@@ -9,7 +11,7 @@ $(function() {
     $('#content .post .meta').height(metaHeight);
     metaOffset = $('#content .post .meta').offset();
     windowHeight = $(window).height();
-    metaStick();console.log('Hello');
+    metaStick();
   }
 
   metaInit();
