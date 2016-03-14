@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<header class='header'>
+  <section class='wrapper'>
+    <nav class='navigation'>
+      {% if page.next.url %}<a class='nav next' href='{{page.next.url}}' title='{{page.next.title}}'>←</a>{% endif %}
+      <a href='{{ site.url }}{{ site.baseurl }}/blog' class='nav back'>See all blog posts ↑</a>
+      {% if page.previous.url %}<a class='nav previous' href='{{page.previous.url}}' title='{{page.previous.title}}'>→</a>{% endif %}
+    </nav>
+    <h1>{{ page.title }}</h1>
+  </body>
+</header>
+
+<section class='section post'>
+  <section class='wrapper'>
+    <article class='body'>
+      {{ content }}
+    </article>
+    <footer class='meta'>
+      <div class='container'>
+        <aside class='authoring'>
+          <img src='{{ site.url }}{{ site.baseurl }}/images/team/{{ page.author }}.jpg'/>
+          <strong>{% for staff in site.data.team %}{% if staff.user == page.author %}{{ staff.title }}{% break %}{% endif %}{% endfor %}</strong>
+          <time datetime='{{ page.date }}'>{{ page.date | date: "%B %d, %Y" }}</time>
+        </aside>
+        <nav class='social'>
+          {% include social.html %}
+        </nav>
+      </div>
+    </footer>
+    <footer class='action'>
+      <h2>Like what you just read?</h2>
+      <p>Leave us your email address and we'll shoot you an email once in a while to share new content. Either that or <a href='{{ site.url }}{{ site.baseurl }}/atom.xml' class='rss'>subscribe to our RSS feed</a>.</p>
+      {% include subscribe.html %}
+    </footer>
+  </section>
+</section>
+
+<section class='posts'>
+  <div class='wrapper'>
+    <ul class='grid'>
+      {% for post in site.related_posts limit:6 %}
+      <li>
+        {% include teaser.html %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

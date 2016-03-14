@@ -1,0 +1,38 @@
+---
+layout: default
+permalink: /work/
+title: Our portfolio speaks for itself
+excerpt: "We've worked with all kind of teams, from scrappy startups to the some of the largest organizations in the world. We've built anything from prototypes of mobile apps to online election platforms for governments."
+class: work
+published: false
+---
+
+<header class='header'>
+  <section class='wrapper'>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.excerpt }}</p>
+    <a href='https://wiredcraft.typeform.com/to/GG4GQz' class='button' target='_blank'>Work with us →</a>
+  </section>
+</header>
+
+{% assign work = site.work | sort: 'date' | reverse %}
+
+<section class='section projects'>
+  <div class='wrapper'>
+    {% for project in work limit:10 %}
+    <article class='item project'>
+
+      <h2><a href='{{ project.url | prepend: site.baseurl }}'>{{ project.title }}</a></h2>
+      <p>{{ project.excerpt }}</p>
+      <div class='preview'><img src='{{ project.preview | prepend: site.baseurl }}' alt='Preview'/></div>
+      <!-- <p><a href='{{ project.url | prepend: site.baseurl }}' class='button'>Read the case study →</a></p> -->
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<footer class='section action'>
+  <section class='wrapper'>
+    {% include hire_and_about.html %}
+  </section>
+</footer>

@@ -1,0 +1,6 @@
+<h2>Apply or recommend a friend. If this leads to a hire we’ll give you <u>1,000 USD</u> (for real).</h2>
+<span class='alternatives'>
+  <a href='https://hunvreus.typeform.com/to/hyZz3a?position={% if page.class == "job" %}{{ page.title | replace:"&","%26" }}{% else %}work buddy{% endif %}&assignee={% if page.assignee %}{{ page.assignee }}{% else %}hunvreus{% endif %}' class='button primary'>Apply now →</a>
+  <span class='or'> or </span>
+  <a href='mailto:job@wiredcraft.com?subject=I know the perfect person for you guys{% if page.title %} as a {{ page.title }}{% endif %}' class='button secondary'>Recommend a friend</a>
+</span>

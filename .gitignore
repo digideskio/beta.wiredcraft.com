@@ -1,0 +1,9 @@
+.*
+!.gitignore
+!.gitmodules
+*~
+
+_site/
+node_modules/
+bower_components/
+_newsletter/*.css.map

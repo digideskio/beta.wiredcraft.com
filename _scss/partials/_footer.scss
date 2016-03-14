@@ -1,0 +1,81 @@
+#footer {
+  background: $light;
+  border-top: 1px solid $line;
+  color: $grey;
+  @include font-size($smaller);
+  margin-top: 3*$space;
+  text-align: left;
+  .wrapper {
+    max-width: $width;
+  }
+  .company {
+    border-bottom: 1px solid $line;
+    @include clearfix;
+    padding: 2*$space 0 $space;
+  }
+  .logo {
+    display: none;
+    height: $space;
+    @include breakpoint(desktop) {
+      display: block;
+      float: right;
+      margin-bottom: 0;
+    }
+  }
+  .vcard {
+    float: left;
+    @include breakpoint(mobile) {
+      float: none;
+      margin-bottom: $space/2;
+      text-align: center;
+      width: 100%;
+    }
+    @include breakpoint(tablet) {
+      text-align: center;
+      width: 33.33%;
+    }
+    @include breakpoint(desktop) {
+      text-align: left;
+      width: 25%;
+    }
+  }
+  .footer {
+    padding: $space 0;
+    .links {
+      a {
+        color: inherit;
+        margin-right: $space/2;
+      }
+    }
+    @include breakpoint(mobile) {
+      text-align: center;
+      .links {
+        float: none;
+      }
+      .social,
+      .email {
+        display: block;
+      }
+    }
+    @include breakpoint(tablet) {
+      text-align: center;
+      .links {
+        float: none;
+      }
+    }
+    @include breakpoint(desktop) {
+      text-align: right;
+      .links {
+        float: left;
+      }
+    }
+  }
+  &:hover {
+    .footer .links a {
+      color: $blue;
+      &:hover {
+        color: shade($blue, 10%);
+      }
+    }
+  }
+}

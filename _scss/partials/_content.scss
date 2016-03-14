@@ -1,0 +1,99 @@
+#content {
+  .header {
+    text-align: center;
+    h1 + p {
+      color: $grey;
+    }
+    .button {
+      @include font-size();
+      padding: $space/3 $space;
+      @include breakpoint(mobile) {
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
+    .wrapper {
+      padding: 3*$space 0;
+      max-width: $content;
+    }
+  }
+
+  // Usually cover pictures
+  .background {
+    background: center center no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: '';
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .alternatives {
+    .or {
+      margin: 0 $space/4;
+    }
+    @include breakpoint(mobile) {
+      .button {
+        box-sizing: border-box;
+        margin-bottom: $space;
+        width: 100%;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .or {
+        display: none;
+      }
+    }
+  }
+
+  /* Grids (lists of staff, posts) */
+  .grid {
+    @include clearfix;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      $label: 3.5*$space;
+      box-sizing: border-box;
+      display: block;
+      float: left;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      text-align: center;
+      @include breakpoint(mobile) {
+        width: 50%;
+      }
+      @include breakpoint(tablet) {
+        width: 33.33%;
+      }
+      @include breakpoint(desktop) {
+        width: 25%;
+      }
+    }
+  }
+
+  /* Navigation links */
+  .nav {
+    background: transparent;
+    border: 2px solid $light;
+    border-radius: $space;
+    color: $grey;
+    display: inline-block;
+    font-family: $headline;
+    @include font-size($smaller);
+    padding: $space/6 $space;
+    @include transition-property(background, color);
+    @include transition-duration($ease);
+    &:hover {
+      background: $light;
+      color: shade($blue, 10%);
+      text-decoration: none;
+    }
+  }
+}

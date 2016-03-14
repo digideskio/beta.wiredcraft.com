@@ -1,0 +1,62 @@
+# Site settings
+title: "Wiredcraft"
+email: "info@wiredcraft.com"
+description: Wiredcraft is a team of expert designers, engineers and strategists building Web and mobile products.
+baseurl: ""
+url: "https://wiredcraft.com"
+enforce_ssl: "wiredcraft.com"
+keywords:
+- Washington DC
+- Berlin
+- Shanghai
+- Web development
+- mobile development
+- strategy
+- design
+- data visualization
+- Open Data
+- international development
+
+# Social/marketing
+twitter_username: wiredcraft
+github_username:  wiredcraft
+google_analytics: UA-8685696-1
+gauges: 51a5bbc2108d7b02010000b7
+mailchimp: "//wiredcraft.us2.list-manage.com/subscribe/post?u=18eb8d6c34ad5d4e781541da9&amp;id=920ba635d7"
+intercom: or40v78e
+
+# Build settings
+exclude: ['README.md', 'package.json', 'bower.json', 'Gemfile', 'node_modules', 'bower_components']
+paginate: 24
+paginate_path: "/blog/:num"
+excerpt_separator: <!-- more -->
+collections:
+  jobs:
+    output: true
+    permalink: /jobs/:title/
+  work:
+    output: false
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      class: post
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: jobs
+    values:
+      layout: job
+      class: job
+
+# Plugins
+gems:
+- jekyll-redirect-from
+- jekyll-sitemap
+- jekyll-paginate

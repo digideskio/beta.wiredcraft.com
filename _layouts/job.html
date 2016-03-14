@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<header class='header'>
+  <section class='wrapper'>
+    <a class='back' href='{{ site.url }}{{ site.baseurl }}/about#jobs'>See all jobs ↑</a>
+    <h1>{{ page.pitch }}</h1>
+    <p><strong>{{ page.title }} ({{ page.location }})</strong>.<br/>{{ page.excerpt }}</p>
+    <a href='https://hunvreus.typeform.com/to/hyZz3a?position={{ page.title | replace:"&","%26" }}&assignee={% if page.assignee %}{{ page.assignee }}{% else %}hunvreus{% endif %}' class='button'>Apply now →</a>
+  </body>
+</header>
+
+<section class='section' id='staff'>
+  <ul class='grid staff'>
+    <li>
+      <img src='/images/office/working.jpg'/>
+    </li>
+    <li>
+      <img src='/images/office/scrum.jpg'/>
+    </li>
+    <li>
+      <img src='/images/office/pair.jpg'/>
+    </li>
+    <li>
+      <img src='/images/office/glass.jpg'/>
+    </li>
+    <li>
+      <img src='/images/office/kitchen.jpg'/>
+    </li>
+    <li>
+      <img src='/images/office/moganshan.jpg'/>
+    </li>
+    <li>
+      <img src='/images/office/bow.jpg'/>
+    </li>
+    <li>
+      <img src='/images/office/cake.jpg'/>
+    </li>
+  </ul>
+</section>
+
+<section class='section'>
+  <section class='wrapper'>
+    {% if page.video %}<iframe src='{{ page.video }}' allowtransparency='true' allowfullscreen='true' allowfullscreenInteractive='true' scrolling='no' border='0' frameborder='0'></iframe>{% endif %}
+    {{ page.content }}
+    {% include join_us.html %}
+  </section>
+</section>
+
+<footer class='section action'>
+  <section class='wrapper'>
+    {% include recommend.html %}
+  </section>
+</footer>

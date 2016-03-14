@@ -1,0 +1,285 @@
+$content: 720px;
+$wrapper: 960px;
+$width: 1200px;
+
+/* General */
+
+body {
+  text-align: center;
+  @include selection {
+    background-color: tint($blue, 40%);
+    color: #FFF;
+  }
+}
+
+a {
+  @include transition-property(color);
+  @include transition-duration(0.2s);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+  font-family: $headline;
+  font-weight: bold;
+}
+
+h1 {
+  // text-transform: uppercase;
+}
+
+blockquote {
+  border-left: 4px solid $light;
+  font-style: italic;
+  margin: 0 0 $space 0;
+  padding-left: $space;
+}
+
+@mixin halves($reverse: false) {
+  box-sizing: border-box;
+  width: 50%;
+  @if $reverse == true {
+    &:nth-child(odd) {
+      float: right;
+      padding-left: $space;
+    }
+    &:nth-child(even) {
+      float: left;
+      padding-right: $space;
+    }
+  }
+  @else {
+    &:nth-child(odd) {
+      float: left;
+      padding-right: $space;
+    }
+    &:nth-child(even) {
+      float: right;
+      padding-left: $space;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.row {
+  @include clearfix;
+  width: $width;
+}
+
+.half {
+  @include halves;
+}
+
+input:not([type=submit]),
+textarea {
+  @include appearance(none);
+}
+
+.button {
+  @include button($blue);
+  border-radius: 2*$space;
+  border: 2px solid $blue;
+  font-family: $headline;
+  @include transition-property(background, border);
+  @include transition-duration(0.4s);
+  &:hover,
+  &:focus { border-color: tint($blue, 10%); }
+  &:active,
+  &.active { border-color: shade($blue, 10%); }
+  &.primary {
+    @include button($red);
+    border-radius: 2*$space;
+    border: 2px solid $red;
+    &:hover,
+    &:focus { border-color: tint($red, 10%); }
+    &:active,
+    &.active { border-color: shade($red, 10%); }
+  }
+  &[disabled=disabled],
+  &[disabled=true],
+  &[disabled],
+  &.disabled {
+    border-color: $silver;
+  }
+  &.secondary {
+    background: transparent;
+    border: 2px solid $red;
+    border-radius: 2*$space;
+    color: $red;
+    &:hover,
+    &:focus {
+      background: transparent;
+      color: tint($red, 20%);
+      border-color: tint($red, 20%);
+    }
+    &:active,
+    &.active {
+      background: transparent;
+      color: shade($red, 20%);
+      border-color: shade($red, 20%);
+    }
+  }
+}
+
+.bundle {
+  &:first-child {
+    border-radius: $space 0 0 $space;
+  }
+  &:last-child {
+    border-radius: 0 $space $space 0;
+  }
+}
+
+.mailchimp {
+  * {
+    display: inline;
+    vertical-align: middle;
+  }
+  .field {
+    margin: 0;
+  }
+  .button {
+    margin-left: $space/4;
+  }
+  @include breakpoint(mobile) {
+    input,
+    .button {
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .button {
+      margin-left: 0;
+      margin-top: $space;
+    }
+  }
+}
+
+/* LAYOUT */
+
+.wrapper {
+	margin: 0 auto;
+  max-width: $wrapper;
+  position: relative;
+  width: 95%;
+}
+
+/* About page */
+
+body.page-about {
+  #content {
+    .header {
+      & + .section {
+        border-top: 0;
+        & + .section {
+          border-top: 0;
+        }
+      }
+    }
+    .staff {
+      background: $light;
+      li {
+        img {
+          @include filter(grayscale(100%));
+          display: block;
+          opacity: 0.8;
+          @include transition-property(all);
+          @include transition-duration(0.4s);
+          width: 100%;
+        }
+        h3 {
+          bottom: -$space;
+          @include font-size($smaller);
+          color: #FFF;
+          left: 0;
+          margin: 0;
+          opacity: 0;
+          padding: 1.5*$space/2 0;
+          position: absolute;
+          right: 0;
+          @include transition-property(bottom, opacity);
+          @include transition-duration(0.2s);
+          z-index: 1000;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+          em {
+            display: block;
+            @include font-size($small);
+            font-style: normal;
+            font-weight: normal;
+          }
+        }
+        &:after {
+          @include background(radial-gradient(transparent, rgba(0, 0, 0, 0.6)) left repeat);
+          bottom: 0;
+          content: ' ';
+          left: 0;
+          opacity: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          @include transition-property(bottom, opacity);
+          @include transition-duration(0.2s);
+          z-index: 999;
+        }
+        &:hover {
+          img {
+            @include filter(grayscale(0));
+            opacity: 1;
+          }
+          h3 {
+            bottom: 0;
+            opacity: 1;
+          }
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Job ad */
+
+body.page-job {
+  #content {
+    .header {
+      & + .section {
+        border-top: 0;
+        & + .section {
+          border-top: 0;
+        }
+      }
+    }
+    .grid {
+      img {
+        display: block
+      }
+    }
+    iframe {
+      margin-bottom: 2*$space;
+      max-width: 100%;
+      width: 720px;
+      @include breakpoint(mobile) {
+        height: 350px;
+      }
+      @include breakpoint(tablet) {
+        height: 375px;
+      }
+      @include breakpoint(desktop) {
+        height: 400px;
+      }
+    }
+  }
+}
+
+/* FOOTER */

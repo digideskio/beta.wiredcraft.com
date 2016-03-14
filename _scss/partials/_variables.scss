@@ -1,0 +1,18 @@
+$red: #EF233C;
+$blue: #239DEF;
+$black: #2B2D42;
+$grey: #8D99AE;
+$silver: #EDF2F4;
+$light: tint($silver, 40%);
+$line: shade($silver, 2%);
+
+$primary: $red;
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+$body: 'Lato', Verdana, Verdana, Geneva, sans-serif;
+
+$radius: 2px;
+
+$content: 720px;
+$wrapper: 960px;
+$width: 1200px;

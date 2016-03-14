@@ -1,0 +1,174 @@
+- user: airen
+  title: Airen Liao
+  position: Senior Web designer
+- user: aleksi
+  title: Aleksi Pekkala
+  position: Developer
+  featured: true
+- user: alexis
+  title: Alexis Jing
+  position: Operations Assistant
+  featured: true
+- user: audrey
+  title: Audrey Haque
+  position: Online Marketing
+  featured: false
+- user: baruch
+  title: Baruch Berger
+  position: Developer
+  featured: true
+- user: ben
+  title: Ben Baoxin
+  position: Web developer
+- user: benjamin
+  title: Benjamin Derville
+  position: Developer
+  featured: false
+- user: charlie
+  title: Charlie Li
+  position: Developer
+  featured: true
+- user: chopper
+  title: Chopper Lee
+  position: Developer
+  featured: true
+- user: christine
+  title: Christine Ren
+  position: Office administrator
+- user: claire
+  title: Claire Sheng
+  position: Office administrator
+  featured: false
+- user: coco
+  title: Coco Yu
+  position: Online Marketing
+  featured: true
+  intro: /blog/hola-coco/
+- user: david
+  title: David Guan
+  position: Developer
+  featured: true
+- user: dominika
+  title: Dominika Wydmuch
+  position: Operations Manager
+  featured: true
+- user: echo
+  title: Echo Hu
+  position: Operations Assistant
+  featured: true
+- user: frank
+  title: Frank Dou
+  position: UI
+- user: hazel
+  title: Hazel Yang
+  position: Designer
+  featured: true
+- user: howell
+  title: Howell Hu
+  position: Web developer
+- user: iris
+  title: Iris Zhou
+  position: Designer
+  featured: true
+- user: jackey
+  title: Jackey Chen
+  position: Web developer
+- user: jamie
+  title: Jamie Stobbs
+  position: Developer
+  featured: true
+- user: jan
+  title: Jan Wang
+  position: Web Designer
+  featured: true
+- user: jonathan
+  title: Jonathan Goodwin
+  position: Online Marketing
+  featured: true
+- user: juha
+  title: Juha Suomalainen
+  position: Developer
+  featured: true
+- user: junjing
+  title: Junjing Zha
+  position: Office administrator
+- user: kate
+  title: Kate Wu
+  position: Developer
+  featured: true
+- user: katie
+  title: Katie Richard
+  position: Online Marketing
+  featured: true
+- user: kuno
+  title: Kuno Qing
+  position: Developer
+  featured: true
+- user: kurt
+  title: Kurt Zhong
+  position: Developer
+- user: lena
+  title: Lena Wan
+  position: Office administrator
+- user: leo
+  title: Leo Zhou
+  position: Developer
+  featured: true
+- user: makara
+  title: Makara Wang
+  position: R&D
+  featured: true
+- user: manuel
+  title: Manuel Villing
+  position: Developer
+  featured: true
+- user: matthieu
+  title: Matthieu Bernard
+  position: Marketing
+- user: meggery
+  title: Meggery Wang
+  position: Administration
+- user: mik
+  title: Mik Pathikirikorale
+  position: Project Manager
+  featured: true
+- user: quentin
+  title: Quentin Berder
+  position: President
+  featured: true
+- user: ronan
+  title: Ronan Berder
+  position: CEO & Founder
+  featured: true
+- user: song
+  title: Song Sun
+  position: Developer
+  featured: true
+- user: thomas
+  title: Thomas Portolano
+  position: Online Marketing
+  featured: true
+- user: vincent
+  title: Vincent Viallet
+  position: Infrastructure
+  featured: true
+- user: wayne
+  title: Wayne Wang
+  position: Developer
+  featured: true
+- user: xavier
+  title: Xavier Zhou
+  position: Developer
+  featured: true
+- user: xeodou
+  title: Xeodou Li
+  position: Developer
+  featured: true
+- user: xufeng
+  title: Fraser Xu
+  position: Developer
+  featured: false
+- user: yuki
+  title: Yuki Gu
+  position: Designer
+  featured: false

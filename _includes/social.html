@@ -1,0 +1,7 @@
+<a class='email popup' href='mailto:?body={{ page.url | prepend: site.url | escape }}'><span>Share by email</span></a>
+<a class='facebook popup' target='_blank' href='https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.url | escape }}'><span>Share on facebook</span></a>
+<a class='twitter popup' target='_blank' href='https://twitter.com/intent/tweet?text=.@wiredcraft%20&related=wiredcraft&url={{ page.url | prepend: site.url | escape }}'><span>Share on Twitter</span></a>
+<a class='google popup' target='_blank' href='https://plus.google.com/share?url={{ page.url | prepend: site.url | escape }}'><span>Share on Google+</span></a>
+<a class='linkedin popup' target='_blank' href='https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | prepend: site.url | escape }}&title={{ page.title | escape }}&source={{ "wiredcraft" | escape }}'><span>Share on LinkedIn</span></a>
+<a class='weibo popup' target='_blank' href='http://service.weibo.com/share/share.php?url={{ page.url | prepend: site.url | escape }}&title={{ page.title | escape }}&dpc=1'><span>Share on Weibo</span></a>
+{% if hn %}<a href='https://news.ycombinator.com/item?id={{ page.hn }}' target='_blank' class='hn'><span>Discussion on HN</span></a>{% endif %}

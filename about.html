@@ -1,0 +1,48 @@
+---
+layout: default
+title: Who we are
+permalink: /about/
+excerpt: "We are a team of nerds, working at the intersection of data, design and technology. From Washington DC to Shanghai, we solve tough engineering and design problems."
+redirect_from:
+  - careers.html
+class: about
+---
+
+<header class='header'>
+  <div class='wrapper'>
+    <h1>We're all kinds of nerds</h1>
+    <p>We're a mix of French, Dutch, Chinese, Finnish, English and American folks working out of Washington DC, Berlin and Shanghai. We spend our days filling walls with post-its, polishing UIs in Sketch and pushing React or Python code around.</p>
+    <a href='https://hunvreus.typeform.com/to/hyZz3a?position=work buddy&assignee=hunvreus' class='button'>Apply for a job →</a>
+  </div>
+</header>
+
+<section class='section' id='staff'>
+  <ul class='grid staff'>
+  {% for staff in site.data.team %}
+    {% if staff.featured %}
+    <li>
+      <img src='{{ site.url }}{{ site.baseurl }}/images/team/{{ staff.user }}.jpg'>
+      <h3>{{ staff.title }} <em>{{ staff.position }}</em></h3>
+    </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+</section>
+
+<section class='section jobs' id='jobs'>
+  <div class='wrapper'>
+    <h2>Join us, build sh*t that matters</h2>
+    {% for post in site.jobs %}
+    <article class='item job'>
+      <h3><a href='{{ site.url }}{{ site.baseurl }}{{ post.url }}'>{{ post.title }} ({{ post.location }}) →</a></h3>
+      <p><strong>{{ post.pitch }}</strong>. {{ post.excerpt | striptags }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class='section action'>
+  <div class='wrapper'>
+    {% include recommend.html %}
+  </div>
+</section>

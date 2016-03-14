@@ -1,0 +1,33 @@
+.project {
+  border-bottom: 1px solid $line;
+  .wrapper {
+    @include clearfix;
+    padding: 2*$space 0;
+  }
+  .summary {
+    box-sizing: border-box;
+    float: left;
+    padding-right: $space;
+    text-align: left;
+    width: 50%;
+  }
+  .preview {
+    box-sizing: border-box;
+    float: right;
+    padding-left: $space;
+    width: 50%;
+  }
+  .testimony {
+    @include clearfix;
+    clear: both;
+    margin: 2*$space auto 0;
+    max-width: $content;
+    text-align: left;
+    blockquote {
+      background: $light;
+      border-radius: $radius;
+      padding: $space;
+    }
+  }
+
+}

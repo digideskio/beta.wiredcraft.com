@@ -1,0 +1,22 @@
+&:after {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: $radius;
+  color: #FFF;
+  @include font-size($small);
+  padding: $gutter/5 $gutter;
+  position: fixed;
+  right: $gutter/4;
+  top: $gutter/4;
+}
+@include breakpoint(mobile) {
+  &:after { content: 'mobile'; }
+}
+@include breakpoint(tablet) {
+  &:after { content: 'tablet'; }
+}
+@include breakpoint(desktop) {
+  &:after { content: 'desktop'; }
+}
+@include breakpoint(highres) {
+  &:after { content: 'highres'; }
+}

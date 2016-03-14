@@ -1,0 +1,86 @@
+---
+layout: default
+title: Creating apps that matter
+excerpt: "We help fortune 500, non-profits and startups create digital products with an impact"
+class: front
+front: true
+---
+
+<header class='header'>
+  <div class='wrapper'>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.excerpt }}</p>
+    <a href='https://wiredcraft.typeform.com/to/GG4GQz' class='button primary' target='_blank'>Tell us about your project →</a>
+  </div>
+
+  <div class='wrapper clients'>
+    <ul class='grid'>
+      {% for client in site.data.clients %}
+        <li><img src='/images/portfolio/{{ client.id }}.svg' alt='{{ client.name }}' title='{{ client.name }}'/></li>
+      {% endfor %}
+    </ul>
+  </div>
+</header>
+
+<section class='project'>
+  <div class='wrapper'>
+  {% for project in site.work %}
+    {% if project.featured %}
+    <article class='summary'>
+      <h2>{{ project.title }}</h2>
+      {{ project.content }}
+      <a href='{{ project.link.url }}' class='button'>{{ project.link.label }} →</a>
+    </article>
+    <aside class='preview'>
+      <img src='http://metalab.co/images/projects/swivl/project-listing-image-8737462a.png'/>
+    </aside>
+    <footer class='testimony'>
+      <blockquote>{{ project.testimony.text }}</blockquote>
+      <span class='meta'>
+        <img src='{{ project.testimony.picture }}'/>
+        <strong>{{ project.testimony.name }}</strong>
+        {{ project.testimony.position }}
+      </span>
+    </footer>
+    {% endif %}
+  {% endfor %}
+  </div>
+</section>
+
+<!-- <section class='section action'>
+  <div class='wrapper'>
+    {% include hire_and_work.html %}
+  </div>
+</section> -->
+
+<!-- <section class='section' id='skills'>
+  <div class='wrapper'>
+    <h2>What we're really good at</h2>
+    <article class='item strategy skill'>
+      <img src='{{ site.url }}{{ site.baseurl }}/images/skills/strategy.png' alt='Illustration'/>
+      <h3>Strategy</h3>
+      <p>We help teams figure out what to do in the first place, through product design or ideation. Our expertise extends to product development, Open Data and elections.</p>
+    </article>
+    <article class='item design skill'>
+      <img src='{{ site.url }}{{ site.baseurl }}/images/skills/design.png' alt='Illustration'/>
+      <h3>Design, UI & UX</h3>
+      <p>We invest early into designing a user experience that will work for our users, guiding teams through our process all the way up to polishing interfaces that are delighful to use.</p>
+    </article>
+    <article class='item development skill'>
+      <img src='{{ site.url }}{{ site.baseurl }}/images/skills/development.png' alt='Illustration'/>
+      <h3>Web & mobile development</h3>
+      <p>We use the right tools for the right job to build Web, iOS, Android & desktop apps. This includes Python, Node.js, Go, React, AngularJS, D3.js, Rust and whole bunch of other things.</p>
+    </article>
+    <article class='item devops skill'>
+      <img src='{{ site.url }}{{ site.baseurl }}/images/skills/devops.png' alt='Illustration'/>
+      <h3>DevOps</h3>
+      <p>May this be implementing autoscaling with Ansible, using Docker for deployment and testing, or bridging the gap between development and ops teams with ChatOps, we just ♥ infrastructure.</p>
+    </article>
+  </div>
+</section> -->
+
+<footer class='section action'>
+  <div class='wrapper'>
+    {% include hire_and_about.html %}
+  </div>
+</footer>

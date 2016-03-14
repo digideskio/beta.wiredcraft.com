@@ -1,0 +1,31 @@
+---
+layout: default
+title: The Wiredcraft blog
+class: blog
+excerpt: Our thoughts on technology, data, design, international development and how this all fit together.
+---
+
+<header class='header'>
+  <section class='wrapper'>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.excerpt }} <a href='{{ site.url }}{{ site.baseurl }}/atom.xml' class='rss'>Subscribe to the RSS feed</a> or leave us your email address:</p>
+    {% include subscribe.html %}
+  </body>
+</header>
+
+<section class='posts'>
+  <div class='wrapper'>
+    <ul class='grid'>
+    {% for post in paginator.posts %}
+      {% if paginator.page == 1 %}{% assign featured = forloop.first %}{% endif %}
+      <li{% if featured %} class='featured'{% endif %}>
+        {% include teaser.html %}
+      </li>
+    {% endfor %}
+    </ul>
+    <footer class='pager'>
+      {% if paginator.previous_page %}<a href='{{ site.url }}{{ site.baseurl }}{{ paginator.previous_page_path }}' class='nav previous'>← New posts</a>{% endif %}
+      {% if paginator.next_page %}<a href='{{ site.url }}{{ site.baseurl }}{{ paginator.next_page_path }}' class='nav next'>Older posts →</a>{% endif %}
+    </footer>
+  </div>
+</section>

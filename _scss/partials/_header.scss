@@ -1,0 +1,125 @@
+#header {
+  border-bottom: 1px solid $line;
+  @include font-size($smaller);
+  text-align: right;
+  .wrapper {
+    @include clearfix;
+    max-width: $width;
+  }
+  * {
+    vertical-align: middle;
+  }
+  .logo {
+    float: left;
+    padding: $space/6 0;
+    img {
+      display: block;
+      height: $space;
+    }
+  }
+  .toggle,
+  .links a {
+    color: $grey;
+    font-family: $headline;
+    @include transition-property(color);
+    @include transition-duration(0.2s);
+    &:hover {
+      color: shade($blue, 10%);
+    }
+  }
+  .button {
+    font-size: inherit;
+    padding: $space/6 $space/2;
+  }
+  @include breakpoint(mobile) {
+    .wrapper {
+      padding: $space/2 0;
+      position: relative;
+    }
+    .toggle {
+      background: none;
+      border: 0;
+      color: $grey;
+      float: right;
+      font-family: $headline;
+      outline: none;
+      &:before {
+        @include icon;
+        content: '=';
+        float: right;
+        @include font-size();
+        margin-left: $space/4;
+        vertical-align: middle;
+      }
+      &.active {
+        &:before {
+          content: 'x';
+        }
+        + .menu {
+          opacity: 1;
+          @include transform(translateY(0));
+          visibility: visible;
+        }
+      }
+    }
+    .menu {
+      background: #FFF;
+      box-shadow: 0 2px  5px rgba(0, 0, 0, 0.1);
+      clear: both;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 100%;
+      visibility: hidden;
+      z-index: 998;
+      @include transform(translateY(-20%));
+      @include transition-property(opacity, transform);
+      @include transition-duration(0.2s);
+      a {
+        border: 0;
+        border-top: 1px solid $light;
+        display: block;
+        @include font-size($larger);
+        padding: 1.5*$space/2 0;
+        &.active {
+          color: inherit;
+        }
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    .wrapper {
+      padding: $space 0;
+    }
+    .toggle {
+      display: none;
+    }
+    .menu {
+      line-height: 160%;
+      a {
+        margin-left: $space;
+        &.active {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+body.fixed {
+  #header {
+    background: #FFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+}
+
+body.scrolled {
+  #header {
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.03);
+  }
+}

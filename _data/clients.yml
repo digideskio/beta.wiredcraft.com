@@ -1,0 +1,16 @@
+- name: United Nations
+  id: un
+- name: Apple
+  id: apple
+- name: CNN
+  id: cnn
+- name: Starbucks
+  id: starbucks
+- name: EA
+  id: ea
+- name: Nvidia
+  id: nvidia
+- name: USAID
+  id: usaid
+- name: MTV
+  id: mtv

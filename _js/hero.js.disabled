@@ -1,0 +1,31 @@
+$(function() {
+  var hero = $('.header.hero .wrapper');
+  // var pitch = $('.header.hero .wrapper > *');
+  // Front page hero
+  // if ($('body').hasClass('page-front')) {
+  //   hero = $('.header.hero, .header.hero ul, .header.hero ul li');
+  // }
+  function fullScreen() {
+    hero.each(function () {
+      var that = $(this);
+      var pitch = $(this).children('.pitch');
+      // Reset for calculations
+      that.css({ 'height': '' });
+      pitch.css({ 'padding-top': '' });
+      // Apply our magic
+      var viewport = $(window).height();
+      var position = hero.offset();
+      that.css({
+        'height': (viewport - position.top),
+        'min-height': that.height()
+      });
+      pitch.css({
+        'padding-top': ((viewport - position.top - pitch.height())/2)
+      });
+    });
+  }
+  if (hero.length) {
+    fullScreen();
+    $(window).resize(fullScreen);
+  }
+});

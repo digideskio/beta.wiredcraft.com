@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta property="og:title" content="*|MC:SUBJECT|*">
+  <title>*|MC:SUBJECT|*</title>
+  <style>
+    /* Adapted from https://github.com/leemunroe/responsive-html-email-template */
+    /* GLOBAL */
+    * {
+      color: #3b3d3e;
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-size: 100%;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none;
+      width: 100%!important;
+      height: 100%;
+    }
+
+    /* ELEMENTS */
+    a {
+      color: #1F8DD6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      text-decoration: none;
+      color: #FFF;
+      background-color: #E32929;
+      border: solid #E32929;
+      border-width: 10px 20px;
+      line-height: 2;
+      font-weight: bold;
+      margin-right: 10px;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      border-radius: 25px;
+      text-transform: uppercase;
+    }
+
+    .last {
+      margin-bottom: 0;
+    }
+
+    .first {
+      margin-top: 0;
+    }
+
+    .padding {
+      padding: 10px 0;
+    }
+
+
+    /* -------------------------------------
+        BODY
+    ------------------------------------- */
+    table.body-wrap {
+      width: 100%;
+      padding: 20px;
+    }
+
+    table.body-wrap .container {
+      border: 1px solid #e0e0e0;
+    }
+
+    table.body-wrap .header {
+      border: 0 !important;
+    }
+
+
+    /* -------------------------------------
+        FOOTER
+    ------------------------------------- */
+    table.footer-wrap {
+      width: 100%;
+      clear: both!important;
+    }
+
+    .footer-wrap .container p {
+      font-size: 12px;
+      color: inherit;
+
+    }
+
+    table.footer-wrap a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    table.footer-wrap a:hover {
+      text-decoration: none;
+    }
+
+
+    /* -------------------------------------
+        TYPOGRAPHY
+    ------------------------------------- */
+    h1, h2, h3 {
+      font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      color: #313334;
+      margin: 20px 0 20px;
+      line-height: 1.4;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 32px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 28px;
+      text-align: center;
+    }
+    h3 {
+      font-size: 24px;
+    }
+
+    p, ul, ol {
+      margin-bottom: 10px;
+      font-weight: normal;
+      font-size: 16px;
+    }
+
+    ul li, ol li {
+      margin-left: 5px;
+      list-style-position: inside;
+    }
+
+    /* ---------------------------------------------------
+        RESPONSIVENESS
+        Nuke it from orbit. It's the only way to be sure.
+    ------------------------------------------------------ */
+
+    /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+    .container {
+      display: block!important;
+      max-width: 580px!important;
+      margin: 0 auto!important; /* makes it centered */
+      clear: both!important;
+    }
+
+    /* Set the padding on the td rather than the div for Outlook compatibility */
+    .body-wrap .container {
+      padding: 20px;
+    }
+
+    /* This should also be a block element, so that it will fill 100% of the .container */
+    .content {
+      max-width: 580px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* Let's make sure tables in the content area are 100% wide */
+    .content table {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body bgcolor="#fafafa">
+
+<!-- BODY -->
+<table class="body-wrap" bgcolor="#fafafa">
+  <tr>
+    <td></td>
+    <td class="container header">
+
+      <!-- HEADER -->
+      <div class="content">
+        <table>
+          <tr>
+            <td align="center">
+              <a href="http://wiredcraft.com"><img src="http://wiredcraft.com/assets/logo-email@2x.png" alt="Wiredcraft" width="180px" height="22px"></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- /HEADER -->
+
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="container" bgcolor="#FFFFFF">
+
+      <!-- CONTENT -->
+      <div class="content">
+      <table>
+        <tr>
+          <td>
+            <p>Hey there! We have some fresh content on <a href="http://wiredcraft.com/blog">our blog</a>, check it out:</p>
+            *|RSSITEMS:|*
+            <a href="*|RSSITEM:URL|*" target="_blank"><h1>*|RSSITEM:TITLE|*</h1></a>
+            <p>*|RSSITEM:CONTENT|*</p>
+            <table>
+              <tr>
+                <td class="padding" align="center">
+                  <p>
+                    <a class="btn-primary" href="*|RSSITEM:URL|*" target="_blank">Read the full story →</a>
+                </td>
+              </tr>
+            </table>
+            *|END:RSSITEMS|*
+            <h2>Other things you may have missed...</h2>
+            <p>*|RSS:RECENT|*</p>
+            <h2>Get in touch</h2>
+            <p align="center">
+              <a href="mailto:info@wiredcraft.com">Email</a> • <a href="http://github.com/wiredcraft">GitHub</a> • <a href="http://twitter.com/wiredcraft">Twitter</a> • <a href="http://weibo.com/wiredcraft">Weibo</a> • <a href="http://www.linkedin.com/company/307338">LinkedIn</a>
+            </p>
+          </td>
+        </tr>
+      </table>
+      </div>
+      <!-- /CONTENT -->
+
+    </td>
+    <td></td>
+  </tr>
+</table>
+<!-- /BODY -->
+
+<!-- FOOTER -->
+<table class="footer-wrap">
+  <tr>
+    <td></td>
+    <td class="container">
+
+      <!-- CONTENT -->
+      <div class="content">
+        <table>
+          <tr>
+            <td align="center">
+              <p>Sent by <a href="http://wiredcraft.com">Wiredcraft</a> | <a href="mailto:info@wiredcraft.com">info@wiredcraft.com</a></p>
+              <p><a href="*|UNSUB|*">Unsubscribe</a> | <a href="*|UPDATE_PROFILE|*">Subscription preferences</a><!-- *|IFNOT:ARCHIVE_PAGE|* --> | <a href="*|ARCHIVE|*">View in your browser</a><!-- *|END:IF|* --></p>
+              *|IF:REWARDS|* <br>*|HTML:REWARDS|* *|END:IF|*
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- /CONTENT -->
+
+    </td>
+    <td></td>
+  </tr>
+</table>
+<!-- /FOOTER -->
+
+</body>
+</html>

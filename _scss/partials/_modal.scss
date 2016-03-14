@@ -1,0 +1,95 @@
+#modal {
+  box-shadow: none;
+  text-align: center;
+  .header {
+    border: 0;
+    .close {
+      color: $grey;
+      @include font-size($huge);
+      line-height: 1;
+      position: absolute;
+      right: $space;
+      top: $space;
+      span {
+        display: none;
+      }
+      &:before {
+        @include icon;
+        content: 'x';
+      }
+      &:hover {
+        color: $black;
+        text-decoration: none;
+      }
+    }
+    h2 {
+      @include font-size($huge);
+    }
+  }
+  .share {
+    a {
+      background: $grey;
+      border-radius: $radius;
+      color: #FFF;
+      display: block;
+      line-height: 1;
+      margin: 0 auto $space/2;
+      padding: $space/2;
+      max-width: 50%;
+      text-align: left;
+      @include transition-property(background);
+      @include transition-duration($ease);
+      &:before {
+        float: left;
+        @include font-size($larger);
+        @include icon;
+        margin-right: $space/2;
+        vertical-align: middle;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      &.email {
+        &:before { content: 'm'; }
+      }
+      &.facebook {
+        background: #3B5998;
+        &:before { content: 'f'; }
+        &:hover { background: tint(#3B5998, 10%); }
+      }
+      &.google {
+        background: #dd4b39;
+        &:before { content: 'g'; }
+        &:hover { background: tint(#dd4b39, 10%); }
+      }
+      &.linkedin {
+        background: #0073b2;
+        &:before { content: 'l'; }
+        &:hover { background: tint(#0073b2, 10%); }
+      }
+      &.twitter {
+        background: #55acee;
+        &:before { content: 't'; }
+        &:hover { background: tint(#55acee, 10%); }
+      }
+      &.weibo {
+        background: #E6132D;
+        &:before { content: 'w'; }
+        &:hover { background: tint(#E6132D, 10%); }
+      }
+      &.hn {
+        background: #FF4F01;
+        &:before {
+          content: 'Y';
+          font-weight: bold;
+        }
+        &:hover { background: tint(#FF4F01, 10%); }
+      }
+    }
+  }
+}
+
+body.modal #overlay,
+#overlay.active {
+  background: #FFF;
+}
