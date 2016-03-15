@@ -1,11 +1,9 @@
 /* Front page */
 body.page-front {
-  background: $black;
   #header {
     background: $black;
     @include transition-property(background);
     @include transition-duration($ease);
-
   }
   &.scrolled {
     #header {
@@ -14,15 +12,33 @@ body.page-front {
   }
   #content {
     .header {
-      // border-bottom: 1px solid $line;
-      // @include linear-gradient(#FFF, $light);
+      background: $black;
+      position: relative;
+      .background {
+        background: url(http://wiredcraft.com/images/posts/product-design-photo.jpg);
+        background-size: cover;
+        opacity: 0.2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        &:after {
+          content: ' ';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          top: 0;
+          background: linear-gradient($black, transparent);
+        }
+      }
       h1 {
         color: #FFF;
         & + p {
           margin-bottom: 2*$space;
         }
       }
-
       .clients {
         padding: 0;
         max-width: $width;
@@ -30,6 +46,7 @@ body.page-front {
       }
       .grid {
         li {
+          // opacity: 0.6;
           padding: $space 0;
           @include breakpoint(mobile) {
             width: 25%;
