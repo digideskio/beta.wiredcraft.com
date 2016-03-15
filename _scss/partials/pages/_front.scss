@@ -46,7 +46,7 @@ body.page-front {
       .clients {
         padding: 0;
         max-width: $width;
-        opacity: 0.6;
+        opacity: 0.8;
       }
       .grid {
         li {
@@ -68,7 +68,6 @@ body.page-front {
           }
           img {
             height: 3*$space;
-            -webkit-filter: brightness(0) invert(1);
           }
         }
       }

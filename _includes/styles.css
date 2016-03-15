@@ -250,7 +250,7 @@ body.page-front #content .header .background:after{content:' ';position:absolute
 body.page-front #content .header h1{color:#FFF}
 body.page-front #content .header h1+p{margin-bottom:48px}
 body.page-front #content .header .pitch{padding:120px 0}
-body.page-front #content .header .clients{padding:0;max-width:1200px;opacity:.6}
+body.page-front #content .header .clients{padding:0;max-width:1200px;opacity:.8}
 body.page-front #content .header .grid li{padding:24px 0}
 @media (max-width:640px){body.page-front #content .header .grid li{width:25%}
 body.page-front #content .header .grid li:first-child,body.page-front #content .header .grid li:last-child{display:none}
@@ -262,7 +262,7 @@ body.page-front #content .header .grid li:last-child{display:none}
 @media (min-width:1025px){body.page-front #content .header .grid li{width:12.25%}
 body.page-front #content .header .grid li:first-child,body.page-front #content .header .grid li:last-child{display:block}
 }
-body.page-front #content .header .grid li img{height:72px;-webkit-filter:brightness(0) invert(1)}
+body.page-front #content .header .grid li img{height:72px}
 body.page-front #footer{background:#EDF2F4;border:0}
 body.page-blog #content .posts .wrapper,body.page-post #content .posts .wrapper{max-width:1200px}
 body.page-blog #content .posts .grid,body.page-post #content .posts .grid{margin:0 -12px -12px 0}
