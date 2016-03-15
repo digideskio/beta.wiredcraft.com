@@ -12,11 +12,12 @@ body.page-front {
   }
   #content {
     .header {
-      background: $black;
+      background: linear-gradient($black, mix($black, $blue, 80%));
       position: relative;
       .background {
         background: url(http://wiredcraft.com/images/posts/product-design-photo.jpg);
         background-size: cover;
+        @include filter(grayscale(100%));
         opacity: 0.2;
         position: absolute;
         top: 0;
@@ -45,11 +46,10 @@ body.page-front {
       .clients {
         padding: 0;
         max-width: $width;
-        opacity: 0.8;
+        opacity: 0.6;
       }
       .grid {
         li {
-          // opacity: 0.6;
           padding: $space 0;
           @include breakpoint(mobile) {
             width: 25%;
@@ -68,6 +68,7 @@ body.page-front {
           }
           img {
             height: 3*$space;
+            -webkit-filter: brightness(0) invert(1);
           }
         }
       }

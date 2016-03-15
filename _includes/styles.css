@@ -244,13 +244,13 @@ body.scrolled #header{box-shadow:0 3px 0 rgba(0,0,0,.03)}
 #content .nav:hover{background:#f4f7f8;color:#208dd7}
 body.page-front #header{background:#2B2D42;-webkit-transition-property:background;-moz-transition-property:background;transition-property:background;-webkit-transition-duration:.2s;-moz-transition-duration:.2s;transition-duration:.2s}
 body.page-front.scrolled #header{background:#FFF}
-body.page-front #content .header{background:#2B2D42;position:relative}
-body.page-front #content .header .background{background:url(http://wiredcraft.com/images/posts/product-design-photo.jpg);background-size:cover;opacity:.2;position:absolute;top:0;left:0;right:0;bottom:0}
+body.page-front #content .header{background:linear-gradient(#2B2D42,#294365);position:relative}
+body.page-front #content .header .background{background:url(http://wiredcraft.com/images/posts/product-design-photo.jpg);background-size:cover;-webkit-filter:grayscale(100%);filter:grayscale(100%);opacity:.2;position:absolute;top:0;left:0;right:0;bottom:0}
 body.page-front #content .header .background:after{content:' ';position:absolute;left:0;bottom:0;right:0;top:0;background:linear-gradient(#2B2D42,transparent)}
 body.page-front #content .header h1{color:#FFF}
 body.page-front #content .header h1+p{margin-bottom:48px}
 body.page-front #content .header .pitch{padding:120px 0}
-body.page-front #content .header .clients{padding:0;max-width:1200px;opacity:.8}
+body.page-front #content .header .clients{padding:0;max-width:1200px;opacity:.6}
 body.page-front #content .header .grid li{padding:24px 0}
 @media (max-width:640px){body.page-front #content .header .grid li{width:25%}
 body.page-front #content .header .grid li:first-child,body.page-front #content .header .grid li:last-child{display:none}
@@ -262,7 +262,7 @@ body.page-front #content .header .grid li:last-child{display:none}
 @media (min-width:1025px){body.page-front #content .header .grid li{width:12.25%}
 body.page-front #content .header .grid li:first-child,body.page-front #content .header .grid li:last-child{display:block}
 }
-body.page-front #content .header .grid li img{height:72px}
+body.page-front #content .header .grid li img{height:72px;-webkit-filter:brightness(0) invert(1)}
 body.page-front #footer{background:#EDF2F4;border:0}
 body.page-blog #content .posts .wrapper,body.page-post #content .posts .wrapper{max-width:1200px}
 body.page-blog #content .posts .grid,body.page-post #content .posts .grid{margin:0 -12px -12px 0}
