@@ -127,8 +127,8 @@ pre .code,pre code{display:block;padding:6px 12px;white-space:pre-wrap}
 .notification.warning{background:#ffe7d1;color:#FF851B}
 .notification>:last-child{margin-bottom:0}
 .notification a{color:inherit;text-decoration:underline}
-.notification a:active,.notification a:hover{text-decoration:none}
-.notification .close{background:0 0;border:0;color:inherit;float:right;opacity:.5;padding:0;text-decoration:none;-webkit-transition-property:opacity;-moz-transition-property:opacity;transition-property:opacity;-moz-transition-duration:.2s;transition-duration:.2s}
+#content .nav:hover,#modal .header .close:hover,#modal .share a:hover,.button.active,.button.primary:focus,.button.primary:hover,.button:active,.button:focus,.button:hover,.notification .close,.notification a:active,.notification a:hover,body.page-blog #content .posts .grid li a:hover,body.page-post #content .post .meta .container .social a:hover,body.page-post #content .posts .grid li a:hover{text-decoration:none}
+.notification .close{background:0 0;border:0;color:inherit;float:right;opacity:.5;padding:0;-webkit-transition-property:opacity;-moz-transition-property:opacity;transition-property:opacity;-moz-transition-duration:.2s;transition-duration:.2s}
 .tooltip span,table tbody tr{-webkit-transition-duration:.2s}
 .notification .close:hover{opacity:1}
 table{border-collapse:collapse;border-spacing:0;border:1px solid #e8edef;margin:0 0 24px}
@@ -158,11 +158,11 @@ blockquote{border-left:4px solid #f4f7f8;margin:0 0 24px;padding-left:24px}
 .button,.button.primary{display:inline-block;outline:0;padding:4px 24px;box-sizing:border-box}
 input:not([type=submit]),textarea{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none}
 .button{background:#239DEF;color:#FFF;border-radius:48px;border:2px solid #239DEF;-webkit-transition-property:background,border;-moz-transition-property:background,border;transition-property:background,border;-webkit-transition-duration:.4s;-moz-transition-duration:.4s;transition-duration:.4s}
-.button:focus,.button:hover{background:#39a7f1;color:#FFF;text-decoration:none;border-color:#39a7f1}
-.button.active,.button:active{background:#208dd7;color:#FFF;text-decoration:none;border-color:#208dd7}
+.button:focus,.button:hover{background:#39a7f1;color:#FFF;border-color:#39a7f1}
+.button.active,.button:active{background:#208dd7;color:#FFF;border-color:#208dd7}
 .button.disabled,.button[disabled=disabled],.button[disabled=true],.button[disabled]{background:#EDF2F4;color:#8D99AE}
 .button.primary{background:#EF233C;color:#FFF;-webkit-transition-property:background,border,color;-moz-transition-property:background,border,color;transition-property:background,border,color;-webkit-transition-duration:.2s;-moz-transition-duration:.2s;transition-duration:.2s;border-radius:48px;border:2px solid #EF233C}
-.button.primary:focus,.button.primary:hover{background:#f13950;color:#FFF;text-decoration:none}
+.button.primary:focus,.button.primary:hover{background:#f13950;color:#FFF}
 .button.primary.active,.button.primary:active{background:#d72036;color:#FFF;text-decoration:none}
 .button.primary.disabled,.button.primary[disabled=disabled],.button.primary[disabled=true],.button.primary[disabled]{background:#EDF2F4;border-color:#d5dadc;color:#8D99AE}
 .button.primary:focus,.button.primary:hover{border-color:#f13950}
@@ -242,7 +242,7 @@ body.scrolled #header{box-shadow:0 3px 0 rgba(0,0,0,.03)}
 @media (min-width:1025px){#content .grid li{width:25%}
 }
 #content .nav{background:0 0;border:2px solid #f4f7f8;border-radius:24px;display:inline-block;font-family:Montserrat,"Helvetica Neue",Helvetica,sans-serif;font-size:14px;font-size:1.4rem;padding:4px 24px;-webkit-transition-property:background,color;-moz-transition-property:background,color;transition-property:background,color;-webkit-transition-duration:.2s;-moz-transition-duration:.2s;transition-duration:.2s}
-#content .nav:hover{background:#f4f7f8;color:#208dd7;text-decoration:none}
+#content .nav:hover{background:#f4f7f8;color:#208dd7}
 body.page-front #content .header{border-bottom:1px solid #e8edef;background-color:#FFF;background-image:-webkit-linear-gradient(#FFF,#f4f7f8);background-image:linear-gradient(#FFF,#f4f7f8)}
 body.page-front #content .header .clients{padding:0;max-width:1200px;opacity:.8}
 body.page-front #content .header .grid li{padding:24px 0}
@@ -265,7 +265,9 @@ body.page-blog #content .posts .grid,body.page-post #content .posts .grid{margin
 }
 @media (min-width:1025px){body.page-blog #content .posts .grid li,body.page-post #content .posts .grid li{padding-bottom:16.66%;width:33.33%}
 }
-@media (max-width:640px){body.page-blog #content .posts .grid li.featured,body.page-post #content .posts .grid li.featured{padding-bottom:100%;width:100%}
+@media (max-width:640px){body.page-blog #content .posts .grid li.featured,body.page-post #content .posts .grid li.featured{padding:0 12px 12px 0;position:relative;width:100%}
+body.page-blog #content .posts .grid li.featured a,body.page-post #content .posts .grid li.featured a{display:block;position:relative}
+body.page-blog #content .posts .grid li.featured a .teaser,body.page-post #content .posts .grid li.featured a .teaser{position:relative}
 }
 @media (min-width:641px){body.page-blog #content .posts .grid li.featured,body.page-post #content .posts .grid li.featured{padding-bottom:50%;width:100%}
 }
@@ -306,7 +308,6 @@ body.page-post #content .post .meta .container .social a:hover span{opacity:1;vi
 body.page-post #content .post .meta .container .social a span:after{content:'';position:absolute;border-right:5px solid transparent;border-bottom-color:#2B2D42;border-top:5px solid #2B2D42;border-left:5px solid transparent;bottom:-5px;left:50%;-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);-o-transform:translateX(-50%);transform:translateX(-50%)}
 #footer .company,.project{border-bottom:1px solid #e8edef}
 body.page-post #content .post .meta .container .social a:before{font-family:icons;font-variant:normal;font-weight:400;speak:none;text-transform:none;-webkit-font-smoothing:antialiased;vertical-align:middle}
-body.page-post #content .post .meta .container .social a:hover{text-decoration:none}
 body.page-post #content .post .meta .container .social a.email{background:#2B2D42}
 body.page-post #content .post .meta .container .social a.email:hover{background:#404255}
 body.page-post #content .post .meta .container .social a.email:before{content:'m'}
@@ -378,11 +379,10 @@ body.page-post #content .post .action{background:#f4f7f8;margin-top:48px;padding
 #modal .header .close{color:#8D99AE;font-size:32px;font-size:3.2rem;line-height:1;position:absolute;right:24px;top:24px}
 #modal .header .close span{display:none}
 #modal .header .close:before{content:'x'}
-#modal .header .close:hover{color:#2B2D42;text-decoration:none}
+#modal .header .close:hover{color:#2B2D42}
 #modal .header h2{font-size:32px;font-size:3.2rem}
 #modal .share a{background:#8D99AE;border-radius:2px;color:#FFF;display:block;line-height:1;margin:0 auto 12px;padding:12px;max-width:50%;text-align:left;-webkit-transition-property:background;-moz-transition-property:background;transition-property:background;-webkit-transition-duration:.2s;-moz-transition-duration:.2s;transition-duration:.2s}
 #modal .share a:before{float:left;font-size:18px;font-size:1.8rem;margin-right:12px}
-#modal .share a:hover{text-decoration:none}
 #modal .share a.email:before{content:'m'}
 #modal .share a.facebook{background:#3B5998}
 #modal .share a.facebook:before{content:'f'}

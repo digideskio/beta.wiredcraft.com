@@ -23,8 +23,16 @@ body.page-post {
           }
           &.featured {
             @include breakpoint(mobile) {
-              padding-bottom: 100%;
+              padding: 0 $space/2 $space/2 0;
+              position: relative;
               width: 100%;
+              a {
+                display: block;
+                position: relative;
+                .teaser {
+                  position: relative;
+                }
+              }
             }
             @include breakpoint(tablet) {
               padding-bottom: 50%;
@@ -53,6 +61,7 @@ body.page-post {
             right: $space/2;
             bottom: $space/2;
             &:hover {
+              text-decoration: none;
               .background {
                 opacity: 1;
                 &:after {
