@@ -249,6 +249,7 @@ body.page-front #content .header .background{background:url(http://wiredcraft.co
 body.page-front #content .header .background:after{content:' ';position:absolute;left:0;bottom:0;right:0;top:0;background:linear-gradient(#2B2D42,transparent)}
 body.page-front #content .header h1{color:#FFF}
 body.page-front #content .header h1+p{margin-bottom:48px}
+body.page-front #content .header .pitch{padding:120px 0}
 body.page-front #content .header .clients{padding:0;max-width:1200px;opacity:.8}
 body.page-front #content .header .grid li{padding:24px 0}
 @media (max-width:640px){body.page-front #content .header .grid li{width:25%}

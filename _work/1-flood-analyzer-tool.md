@@ -1,5 +1,5 @@
 ---
-title: The Aqueduct Global Flood Analyzer Tool
+title: Predicting & visualizing the impact of floods around the globe
 excerpt: Understanding and visualizing the impact and risks of floods worldwide with the World Resources Institute
 tags:
   - data science
