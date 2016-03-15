@@ -297,7 +297,8 @@ body.page-post {
         }
       }
       .action {
-        background: $light;
+        border: 1px solid $line;
+        border-radius: $radius;
         margin-top: 2*$space;
         padding: $space;
         text-align: center;

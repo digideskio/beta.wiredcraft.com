@@ -6,30 +6,35 @@ $(function() {
       windowHeight = 0;
 
   function metaInit() {
-    $('#content .post .meta').height('');
-    metaHeight = $('#content .post .meta').outerHeight();
+    metaHeight = $('#content .post .meta .container').outerHeight();
     $('#content .post .meta').height(metaHeight);
     metaOffset = $('#content .post .meta').offset();
     windowHeight = $(window).height();
     metaStick();
   }
 
-  metaInit();
+  $(window).load(function () { metaInit(); });
 
-  // Custom event thrown by vide.js
-  $('#content .post .body').on('modified', metaInit);
-
-  // Resizing the window change the offset
-  $(window).resize(function() {
-    metaInit();
+  // If we have videos, we want to initialize after embedding them (see video.js)
+  $('#content .post .body').on('modified', function () {
+    $(window).load(function () {
+      metaInit();
+    });
   });
 
-  $(window).scroll(function () { metaStick(); });
+  // Resizing the window change the offset
+  // $(window).resize(function() {
+  //   metaInit();
+  // });
+
+  $(window).scroll(function () {
+    metaStick();
+  });
 
   function metaStick() {
     var windowScroll = $(window).scrollTop();
 
-    if ((windowScroll + windowHeight) < metaOffset.top) {
+    if ((windowScroll + windowHeight) < metaOffset.top + metaHeight) {
       $('#content .post .meta .container').addClass('fixed');
     }
     else {

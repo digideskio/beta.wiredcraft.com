@@ -1,9 +1,28 @@
 /* Front page */
 body.page-front {
+  background: $black;
+  #header {
+    background: $black;
+    @include transition-property(background);
+    @include transition-duration($ease);
+
+  }
+  &.scrolled {
+    #header {
+      background: #FFF;
+    }
+  }
   #content {
     .header {
-      border-bottom: 1px solid $line;
-      @include linear-gradient(#FFF, $light);
+      // border-bottom: 1px solid $line;
+      // @include linear-gradient(#FFF, $light);
+      h1 {
+        color: #FFF;
+        & + p {
+          margin-bottom: 2*$space;
+        }
+      }
+
       .clients {
         padding: 0;
         max-width: $width;
@@ -33,5 +52,9 @@ body.page-front {
         }
       }
     }
+  }
+  #footer {
+    background: $silver;
+    border: 0;
   }
 }
