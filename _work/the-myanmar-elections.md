@@ -1,14 +1,15 @@
 ---
-title: Voter registration for the Myanmar elections
-excerpt: Building the voter registration platform with IFES and UEC
-author: ronan
+title: Building the software for the Myanmar elections
+excerpt: "Working with IFES and the UEC, we designed, built, shipped and maintained
+  the entire suite of software that ensured the success of the first successful
+  elections in Myanmar in 2015."
 tags:
   - Myanmar
   - elections
   - IFES
   - UEC
-redirect_from:
-  - /work/voter-registration-for-the-myanmar-elections/
+cover: /images/posts/check-my-name-software.png
+featured: true
 ---
 
 IFES and UEC are preparing and organizing Myanmar's first democratic election in 25 years, enlisting Wiredcraft to provide a platform that would be stable, reliable and re-usable in order to register voters throughout the country. Leveraging our expertise in building and maintaining user-friendly voter registration systems, we delivered an easy to use system under a strict deadline.
