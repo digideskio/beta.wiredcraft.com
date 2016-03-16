@@ -8,7 +8,7 @@ front: true
 
 <header class='header'>
   <div class='background'></div>
-  <div class='wrapper pitch'>
+  <div class='wratestimoniespper pitch'>
     <h1>{{ page.title }}</h1>
     <p>{{ page.excerpt }}</p>
     <a href='https://wiredcraft.typeform.com/to/GG4GQz' class='button primary' target='_blank'>Tell us about your project →</a>
@@ -35,16 +35,24 @@ front: true
     <aside class='preview'>
       <img src='http://metalab.co/images/projects/swivl/project-listing-image-8737462a.png'/>
     </aside>
-    <footer class='testimony'>
-      <blockquote>{{ project.testimony.text }}</blockquote>
-      <span class='meta'>
-        <img src='{{ project.testimony.picture }}'/>
-        <strong>{{ project.testimony.name }}</strong>
-        {{ project.testimony.position }}
-      </span>
-    </footer>
     {% endif %}
   {% endfor %}
+  </div>
+</section>
+
+<section class='section testimonies'>
+  <div class='wrapper'>
+    <h2>Our clients love us</h2>
+    {% for testimony in site.data.testimonies %}
+    <article class='testimony'>
+      <blockquote>{{ testimony.text }}</blockquote>
+      <span class='meta'>
+        <img src='{{ testimony.picture }}'/>
+        <strong>{{ testimony.name }}</strong>
+        {{ testimony.position }}
+      </span>
+    </article>
+    {% endfor %}
   </div>
 </section>
 

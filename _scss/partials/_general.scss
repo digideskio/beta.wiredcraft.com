@@ -228,7 +228,7 @@ body.page-about {
           top: 0;
           @include transition-property(bottom, opacity);
           @include transition-duration(0.2s);
-          z-index: 999;
+          z-index: 100;
         }
         &:hover {
           img {

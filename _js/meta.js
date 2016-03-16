@@ -23,9 +23,9 @@ $(function() {
   });
 
   // Resizing the window change the offset
-  // $(window).resize(function() {
-  //   metaInit();
-  // });
+  $(window).resize(function() {
+    metaInit();
+  });
 
   $(window).scroll(function () {
     metaStick();

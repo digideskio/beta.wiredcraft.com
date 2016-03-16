@@ -4,10 +4,22 @@ body.page-front {
     background: $black;
     @include transition-property(background);
     @include transition-duration($ease);
+    .toggle,
+    .links a {
+      &:hover {
+        color: #FFF;
+      }
+    }
   }
   &.scrolled {
     #header {
       background: #FFF;
+      .toggle,
+      .links a {
+        &:hover {
+          color: $black;
+        }
+      }
     }
   }
   #content {
@@ -68,6 +80,54 @@ body.page-front {
           }
           img {
             height: 3*$space;
+          }
+        }
+      }
+    }
+
+    .testimonies {
+      background: $light;
+      @include clearfix;
+      .testimony {
+        margin-top: $space;
+        text-align: left;
+        @include breakpoint(tablet) {
+          @include halves();
+        }
+        blockquote {
+          background: #FFF;
+          border: 0;
+          border-radius: $radius;
+          box-shadow: 0 1px 1px rgba(0,0,0,.05);
+          color: inherit;
+          padding: $space;
+          position: relative;
+          &:after {
+            border-color: #FFF transparent;
+            border-style: solid;
+            border-width: $space/2 $space/2 0 0;
+            bottom: -$space/2;
+            content: '';
+            display: block;
+            position: absolute;
+            left: $space;
+            width: 0;
+          }
+        }
+        .meta {
+          display: inline-block;
+          @include font-size();
+          line-height: 160%;
+          white-space: nowrap;
+          img {
+            border-radius: 2*$space;
+            float: left;
+            margin-right: $space/3;
+            width: 2*$space;
+          }
+          strong {
+            display: block;
+            @include font-size($larger);
           }
         }
       }

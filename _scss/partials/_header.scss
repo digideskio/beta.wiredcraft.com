@@ -24,7 +24,8 @@
     @include transition-property(color);
     @include transition-duration(0.2s);
     &:hover {
-      color: shade($blue, 10%);
+      color: $black;
+      text-decoration: none;
     }
   }
   .button {
@@ -34,22 +35,22 @@
   @include breakpoint(mobile) {
     .wrapper {
       padding: $space/2 0;
-      position: relative;
     }
     .toggle {
       background: none;
       border: 0;
       color: $grey;
       float: right;
-      font-family: $headline;
+      @include font-size($large);
       outline: none;
+      vertical-align: middle;
+      span {
+        display: none;
+      }
       &:before {
         @include icon;
         content: '=';
         float: right;
-        @include font-size();
-        margin-left: $space/4;
-        vertical-align: middle;
       }
       &.active {
         &:before {
@@ -86,6 +87,9 @@
         &.active {
           color: inherit;
         }
+      }
+      .button {
+        border-radius: 0;
       }
     }
   }
