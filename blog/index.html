@@ -13,9 +13,8 @@ excerpt: Our thoughts on technology, data, design, international development and
   </body>
 </header>
 
-<section class='posts'>
+<section class='section' id='posts'>
   <div class='wrapper'>
-    <ul class='grid'>
     {% for post in paginator.posts %}
       {% if paginator.page == 1 %}{% assign featured = forloop.first %}{% endif %}
       <li{% if featured %} class='featured'{% endif %}>

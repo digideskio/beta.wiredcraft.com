@@ -1,4 +1,5 @@
 .project {
+  border-bottom: 1px solid $line;
   .wrapper {
     @include clearfix;
     padding: 2*$space 0;

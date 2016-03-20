@@ -7,10 +7,18 @@
     use products. Our team, funders and users have been nothing but impressed.
     We can’t wait to start our next project with them!"
 - name: Thomas Channussot
-  position: Voter Registration Software Architect
+  position: Software Architect
   organization: IFES
   picture: /images/testimonies/thomas-channusot.jpg
   text: "I worked with Wiredcraft on several occasions, and each time I knew
     they would deliver excellent products. Their rapid prototyping approach
     led us to well design, secured and maintanable outcomes. They were
     the key factor in our success through thick and thin."
+- name: Florian Bohnert
+  position: Co-Director
+  organization: StartupGrind
+  picture: /images/testimonies/florian-bohnert.jpg
+  text: "Wiredcraft was introduced to me as an engineering team. This was far from
+    accurate; they brough much more than just a technical expertise, helping with
+    core activities of our business and getting us to grow better and faster than
+    we had before we met them."

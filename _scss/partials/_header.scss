@@ -1,7 +1,14 @@
 #header {
-  // border-bottom: 1px solid $line;
+  background: #FFF;
   @include font-size($smaller);
+  position: fixed;
   text-align: right;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  &.scrolled {
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.03);
+  }
   .wrapper {
     @include clearfix;
     max-width: $width;
@@ -109,21 +116,5 @@
         }
       }
     }
-  }
-}
-
-body.fixed {
-  #header {
-    background: #FFF;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-  }
-}
-
-body.scrolled {
-  #header {
-    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.03);
   }
 }

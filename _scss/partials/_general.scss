@@ -87,23 +87,20 @@ textarea {
 
 .button {
   @include button($blue);
-  border-radius: 2*$space;
   border: 2px solid $blue;
+  border-radius: $space;
   font-family: $headline;
-  @include transition-property(background, border);
-  @include transition-duration(0.4s);
   &:hover,
   &:focus { border-color: tint($blue, 10%); }
   &:active,
   &.active { border-color: shade($blue, 10%); }
   &.primary {
-    @include button($red);
-    border-radius: 2*$space;
-    border: 2px solid $red;
+    border: 2px solid $primary;
+    border-radius: $space;
     &:hover,
-    &:focus { border-color: tint($red, 10%); }
+    &:focus { border-color: tint($primary, 10%); }
     &:active,
-    &.active { border-color: shade($red, 10%); }
+    &.active { border-color: shade($primary, 10%); }
   }
   &[disabled=disabled],
   &[disabled=true],
@@ -114,7 +111,7 @@ textarea {
   &.secondary {
     background: transparent;
     border: 2px solid $red;
-    border-radius: 2*$space;
+    border-radius: $space;
     color: $red;
     &:hover,
     &:focus {
@@ -170,7 +167,7 @@ textarea {
 	margin: 0 auto;
   max-width: $wrapper;
   position: relative;
-  width: 95%;
+  width: 92%;
 }
 
 /* About page */
@@ -185,7 +182,7 @@ body.page-about {
         }
       }
     }
-    .staff {
+    #staff {
       background: $light;
       li {
         img {

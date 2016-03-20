@@ -10,17 +10,17 @@
   }
   display: inline-block;
   outline: none;
-  padding: $space/6 $space;
+  padding: $space/4 $space;
   @include transition-property(background, border, color);
   @include transition-duration($ease);
   &:hover,
   &:focus {
     @if $clear == true {
-      background: shade($color, 5%);
+      background: tint($color, 30%);
       color: inherit;
     }
     @else {
-      background: tint($color, 10%);
+      background: tint($color, 15%);
       color: #FFF;
     }
     text-decoration: none;
@@ -28,7 +28,7 @@
   &:active,
   &.active {
     @if $clear == true {
-      background: tint($color, 80%);
+      background: shade($color, 5%);
       color: inherit;
     }
     @else {

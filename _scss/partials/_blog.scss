@@ -2,117 +2,7 @@
 body.page-blog,
 body.page-post {
   #content {
-    .posts {
-      .wrapper {
-        max-width: $width;
-      }
-      .grid {
-        margin: 0 (-$space/2) (-$space/2) 0;
-        li {
-          @include breakpoint(mobile) {
-            padding-bottom: 50%;
-            width: 100%;
-          }
-          @include breakpoint(tablet) {
-            padding-bottom: 25%;
-            width: 50%;
-          }
-          @include breakpoint(desktop) {
-            padding-bottom: 16.66%;
-            width: 33.33%;
-          }
-          &.featured {
-            @include breakpoint(mobile) {
-              padding: 0 $space/2 $space/2 0;
-              position: relative;
-              width: 100%;
-              a {
-                display: block;
-                position: relative;
-                .teaser {
-                  position: relative;
-                }
-              }
-            }
-            @include breakpoint(tablet) {
-              padding-bottom: 50%;
-              width: 100%;
-            }
-            @include breakpoint(desktop) {
-              margin-bottom: -1px; /* HACK: seems to break otherwise */
-              padding-bottom: 33.33%;
-              width: 66.66%;
-            }
-            .teaser {
-              bottom: auto;
-              top: 0;
-              h3 {
-                @include font-size($gigantic);
-              }
-            }
-          }
-          a {
-            background: $grey;
-            border-radius: $radius;
-            overflow: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: $space/2;
-            bottom: $space/2;
-            &:hover {
-              text-decoration: none;
-              .background {
-                opacity: 1;
-                &:after {
-                  opacity : 1;
-                }
-              }
-            }
-          }
-          .background {
-            background-color: $blue;
-            @include filter(grayscale(20%));
-            opacity: 0.8;
-            @include transition-property(opacity);
-            @include transition-duration($ease);
-            &:after {
-              @include background(radial-gradient(transparent, rgba(0, 0, 0, 0.6)) left repeat);
-              bottom: 0;
-              content: ' ';
-              left: 0;
-              opacity: 0.4;
-              position: absolute;
-              right: 0;
-              top: 0;
-              @include transition-property(opacity);
-              @include transition-duration(0.2s);
-              z-index: 999;
-            }
-          }
-          .teaser {
-            padding: $space;
-            position: absolute;
-            text-align: left;
-            bottom: 0;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
-            h3 {
-              color: #FFF;
-              margin: 0;
-            }
-            .meta {
-              color: $silver;
-              @include font-size($small);
-              margin-bottom: $space/4;
-            }
-            p {
-              color: $silver;
-              margin: $space/2 0 0;
-            }
-          }
-        }
-      }
-    }
+    
   }
 }
 
@@ -148,7 +38,7 @@ body.page-post {
       }
     }
     .post {
-      margin-bottom: 2*$space;
+      padding-bottom: 2*$space;
       .wrapper {
         max-width: $content;
         text-align: left;
@@ -297,7 +187,7 @@ body.page-post {
         }
       }
       .action {
-        border: 1px solid $line;
+        background: $light;
         border-radius: $radius;
         margin-top: 2*$space;
         padding: $space;
